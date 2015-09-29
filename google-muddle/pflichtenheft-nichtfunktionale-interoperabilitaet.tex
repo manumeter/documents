@@ -1,0 +1,69 @@
+\subsection{Interoperabilität}
+\label{subsec:nichtfunktionale-interoperabilitaet}
+
+Interoperabilität bezeichnet gemäss \cite{iso:9126} die \enquote{Fähigkeit, mit
+vorgegebenen Systemen zusammenzuwirken}.
+
+\subsubsection{Beschreibung}
+
+Es wird ein hoher Verbreitungsgrad der Applikation angestrebt, da sich dadurch
+ihre Wirkung verbessert. Deshalb ist es wichtig, eine möglichst breite Variation
+von Browsern zu unterstützen. Die Applikation soll mit den in der Tabelle
+\ref{tbl:browser-gewichtung} aufgelisteten Browsern (gemäss Gewichtung) in
+jeweils neuester Version (für Desktop-Betriebssysteme) kompatibel sein. Die
+Gewichtung wurde auf Grundlage der Browserstatistik von
+\cite{w3schools:browserstats} vorgenommen.
+\\[\intextsep]
+\begin{minipage}{\linewidth}
+	\centering
+	\begin{tabular}{llr}
+		\hline
+		Browser           & Betriebssysteme     & Gewichtung $g$ \\
+		\hline
+		Apple Safari      & Mac                 & \textbf{1} \\
+		Google Chrome     & Linux, Mac, Windows & \textbf{4} \\
+		Internet Explorer & Windows             & \textbf{2} \\
+		Mozilla Firefox   & Linux, Mac, Windows & \textbf{3} \\
+		Opera             & Mac, Windows        & \textbf{1} \\
+		\hline
+	\end{tabular}
+	\tabcaption{Liste kompatibler Browser mit Gewichtung}
+	\label{tbl:browser-gewichtung}
+\end{minipage}
+
+\subsubsection{Messverfahren}
+
+Zwecks Messbarkeit wurden drei Stufen der Erfüllung, die pro Browser ermittelt
+werden, definiert (siehe Tabelle \ref{tbl:interoperabilitaet-erfuellung}).
+\\[\intextsep]
+\begin{minipage}{\linewidth}
+	\centering
+	\begin{tabular}{ll}
+		\hline
+		Erfüllungsgrad $e$ & Beschreibung \\
+		\hline
+		\textbf{1}
+		 & Die Applikation läuft mit diesem Browser. \\
+		\multirow{2}{*}{\textbf{2}}
+		 & Die Applikation läuft mit diesem Browser und \\
+		 & bietet einen reduzierten Funktionsumfang. \\
+		\multirow{2}{*}{\textbf{3}}
+		 & Die Applikation läuft mit diesem Browser und \\
+		 & bietet den vollen Funktionsumfang. \\
+		\hline
+	\end{tabular}
+	\tabcaption{Erfüllungsgrad der Interoperabilität pro Browser}
+	\label{tbl:interoperabilitaet-erfuellung}
+\end{minipage}
+\\[\intextsep]
+Damit die Anforderung als erfüllt betrachtet wird, ist eine Summe für alle
+Browser aus Tabelle \ref{tbl:browser-gewichtung} aus Gewichtung $g$
+multipliziert mit Erfüllungsgrad $e$ (also $ \sum g * e $) von mindestens 29
+erforderlich. Maximal ist 33 möglich.
+
+\subsubsection{Geltungsbereich}
+
+Diese Anforderung bezieht sich auf alle funktionalen Anforderungen, falls der
+Erfüllungsgrad 3 ist. Ansonsten (Erfüllungsgrad 1 und 2) kann die Untermenge
+beliebig ausgewählt werden (siehe Tabelle
+\ref{tbl:interoperabilitaet-erfuellung}).

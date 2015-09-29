@@ -1,0 +1,48 @@
+% in PDF konfertieren mit (mehrfachdurchläufe notwendig) :! pdflatex %
+
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[utf8]{inputenc} % für Umlaut-Encoding
+\usepackage{ngerman} % für deutsche Titel, Silbentrennung, etc. (benötigt das 
+                     % Paket texlive-lang-german)
+\usepackage{graphicx} % für Bildeinbindung
+\usepackage[round]{natbib} % für das Literaturverzeichnis
+\usepackage{acronym} % für das Abkürzungsverzeichnis (benötigt das Paket
+                     % texlive-latex-extra)
+\usepackage{multirow} % für Tabellen mit spaltenübergreifenden Werten
+\usepackage{nonfloat} % für Tabellen/Bild-Positionierung
+\usepackage[autostyle=true,german=quotes]{csquotes} % Anführungszeichen global
+                                                    % definieren
+\usepackage[hidelinks]{hyperref} % für URLs
+
+\title{Grobspezifikation 0.7 \textit{Google Muddle}}
+\author{Manuel Mästinger\\\small Modularbeit 4.2 Software Engineering\\\small
+ZHAW, School of Engineering, MAS Informatik 8}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\input{grobspezifikation-aenderungen.tex}
+\newpage
+
+\tableofcontents
+\newpage
+
+\input{grobspezifikation-einleitung.tex}
+\newpage
+\input{grobspezifikation-systemabgrenzung.tex}
+\newpage
+\input{grobspezifikation-anwendungsfaelle.tex}
+\newpage
+\input{grobspezifikation-systemschnittstellen.tex}
+\newpage
+\input{grobspezifikation-ablaufbeschreibung.tex}
+\newpage
+\input{grobspezifikation-klassendiagramm.tex}
+\newpage
+
+\input{grobspezifikation-verzeichnisse.tex}
+
+\end{document}

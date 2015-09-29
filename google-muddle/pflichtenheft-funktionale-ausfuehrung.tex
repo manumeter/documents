@@ -1,0 +1,40 @@
+\subsection{Eruieren der Ausführung}
+\label{subsec:funktionale-ausfuehrung}
+
+Mit \enquote{Eruieren der Ausführung} ist gemeint, dass die Applikation ständig
+überprüft, wie stark der Computer und die Netzwerkverbindung gerade ausgelastet
+sind und, wenn genügend Ressourcen zur Verfügung stehen, Suchanfragen oder
+Updates initiiert.
+
+\subsubsection{Auslöser}
+
+Auslöser ist der Start der Applikation (funktionale Anforderung
+\ref{subsec:funktionale-start}).
+
+\subsubsection{AkteurInnen}
+
+AkteurInnen sind für diese funktionale Anforderung keine vorhanden.
+
+\subsubsection{Essenzielle Schritte}
+
+\begin{enumerate}
+\item Die Applikation wartet eine zufällige Zeit zwischen 5 Sekunden und 2
+Minuten\footnote[1]{Bei diesen Zeiten handelt es sich um Vorschläge, die im
+Verlauf der Entwicklung durch Erfahrungswerte ersetzt werden sollten.}.
+\item \textit{Google Muddle} überprüft, ob der Computer und die
+Netzwerkverbindung ausgelastet sind. Falls eine Schwelle überschritten wird, die
+für den/die BenutzerIn bemerkbar ist, wird Punkt 1 erneut ausgeführt. Um hier
+eine Endlosschleife zu vermeiden, soll die Schwelle dynamisch an die
+Gegebenheiten angepasst werden.
+\item Falls die letzte Überprüfung schon über 7 Tage\footnote[2]{Die 7 Tage
+werden als angemessen einschätzt. Auch hier darf die Zahl im Verlauf der
+Entwicklung gerne angepasst werden, wenn die Erfahrung zeigt, dass ein anderer
+Wert optimal wäre.} her ist überprüft \textit{Google Muddle}, ob eine neuere
+Version verfügbar ist und installiert diese gegebenenfalls (funktionale
+Anforderung \ref{subsec:funktionale-update}). Dabei wird der Zeitpunkt dieser
+Überprüfung protokolliert. Sollte eine neuere Version installiert worden sein,
+wird \textit{Google Muddle} neu gestartet.
+\item Eine Suchanfrage wird gestartet (funktionale Anforderung
+\ref{subsec:funktionale-suche}).
+\item Die Schritte werden erneut ab Punkt 1 ausgeführt.
+\end{enumerate}

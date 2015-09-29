@@ -1,0 +1,44 @@
+% in PDF konfertieren mit (mehrfachdurchläufe notwendig) :! pdflatex %
+
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[utf8]{inputenc} % für Umlaut-Encoding
+\usepackage{ngerman} % für deutsche Titel, Silbentrennung, etc. (benötigt das
+                     % Paket texlive-lang-german)
+\usepackage{graphicx} % für Bildeinbindung
+\usepackage[round]{natbib} % für das Literaturverzeichnis
+\usepackage{acronym} % für das Abkürzungsverzeichnis (benötigt das Paket
+                     % texlive-latex-extra)
+\usepackage{multirow} % für Tabellen mit spaltenübergreifenden Werten
+\usepackage{nonfloat} % für Tabellen/Bild-Positionierung
+\usepackage[autostyle=true,german=quotes]{csquotes} % Anführungszeichen global
+                                                    % definieren
+\usepackage[hidelinks]{hyperref} % für URLs
+
+\title{Pflichtenheft 0.8 \textit{Google Muddle}}
+\author{Manuel Mästinger\\\small Modularbeit 4.2 Software Engineering\\\small
+ZHAW, School of Engineering, MAS Informatik 8}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\input{pflichtenheft-aenderungen.tex}
+\newpage
+
+\tableofcontents
+\newpage
+
+\input{pflichtenheft-einleitung.tex}
+\newpage
+\input{pflichtenheft-funktionale.tex}
+\newpage
+\input{pflichtenheft-nichtfunktionale.tex}
+\newpage
+\input{pflichtenheft-rahmenbedingungen.tex}
+
+\input{pflichtenheft-literatur.tex}
+\input{pflichtenheft-verzeichnisse.tex}
+
+\end{document}

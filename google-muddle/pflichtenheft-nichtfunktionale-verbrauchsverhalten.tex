@@ -1,0 +1,31 @@
+\subsection{Verbrauchsverhalten}
+\label{subsec:nichtfunktionale-verbrauchsverhalten}
+
+Verbrauchsverhalten definiert nach \cite{iso:9126} die \enquote{Anzahl und Dauer
+der benötigten Betriebsmittel bei der Erfüllung der Funktionen}.
+
+\subsubsection{Beschreibung}
+
+Da \textit{Google Muddle} für seine BenutzerInnen direkt funktional wenig
+bietet, soll die Applikation auch möglichst unaufdringlich und
+ressourcenschonend arbeiten. Es ist nicht sehr relevant, wann die einzelnen
+Funktionen genau ausgeführt werden. Dies sollte daher möglichst dann geschehen,
+wenn der Computer wenig zu tun hat - also etwa wenn niemand damit am arbeiten
+ist.
+
+\subsubsection{Messverfahren}
+
+So viele BenutzerInnen wie möglich werden in einer Testphase mit einem Browser
+arbeiten, ohne zu wissen, ob die Applikation installiert ist oder nicht. Dabei
+dürfen sie keinen Unterschied feststellen. Die BenutzerInnen werden sowohl mit
+aktueller, als auch mit alter Hardware arbeiten. Auch die Betriebssysteme und
+die darauf installierten Browser werden divers sein (siehe Tabelle 
+\ref{tbl:browser-gewichtung} auf Seite \pageref{tbl:browser-gewichtung}).
+
+Wenn mehr als 5 Prozent der BenutzerInnen eindeutig erkennen, ob die Applikation
+installiert ist oder nicht, gilt diese Anforderung als nicht erfüllt.
+
+\subsubsection{Geltungsbereich}
+
+Diese Anforderung gilt für die gesamten Laufzeit der Applikation. Als besonders
+kritisch gilt dabei meist der Start, da in dieser Phase bewusst gewartet wird.

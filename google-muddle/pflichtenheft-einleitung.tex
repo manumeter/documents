@@ -1,0 +1,86 @@
+\section{Einleitung}
+\label{sec:einleitung}
+
+\subsection{Zum Dokument}
+
+Dieses Dokument soll als möglichst präzise Vorlage für die
+Grobspezifikation der Applikation \textit{Google Muddle} dienen.
+
+Neben den funktionalen (Kapitel \ref{sec:funktionale}) und den nichtfunktionalen
+Anforderungen (Kapitel \ref{sec:nichtfunktionale}) werden in diesem Dokument
+auch die Rahmenbedingungen (Kapitel \ref{sec:rahmenbedingungen}) festgelegt.
+Ergänzend sind im Kapitel \ref{sec:einleitung} die Motivation sowie der
+angestrebte Soll-Zustand kurz skizziert.
+
+Am Ende des Dokuments können dann die Verweise auf zitierte Literatur, das
+Abkürzungens- und das Tabellenverzeichnis gefunden werden.
+
+Um die Geschlechtsneutralität der Aussagen zu gewährleisten werden in diesem
+Dokument in der Regel Binnenmajuskeln verwendet. So sollen die weibliche und
+die männliche Bezeichnung in kurzer Form vereint werden (vgl.
+\url{https://de.wikipedia.org/wiki/Binnen-I}).
+
+\subsection{Referenzdokumente}
+
+Es sind keine Referenzdokumente vorhanden.
+
+\subsection{Motivation}
+\label{subsec:einleitun-motivation}
+
+Wie die Enthüllungen durch \cite{snowden:nsa} gezeigt haben, werden (durch die
+\acs{NSA}) flächendeckend Überwachungstechniken eingesetzt, die das Verhalten
+fast aller Internetbesucher protokollieren und automatisch auswerten.
+Multinationale Internetkonzerne wie Google mit strategisch gut geeignetem
+Dienstleistungsangebot und ausreichendem Kundenstamm spielen dabei eine zentrale
+Rolle. Um dieser golbalen Überwachung zu entgehen, oder sie wenigstens zu
+erschweren, gibt es meines Erachtens drei Strategien, deren Kombination
+höchstmöglichen Schutz der Privatsphäre bietet.
+
+Erstens kann versucht werden, Nutz- und Metadaten so zu verschlüsseln bzw. zu
+verschleiern (zum Beispiel durch die Umleitung über viele kaskadierte Knoten),
+dass deren Protokollierung nutzlos würde, da die Auswertung kaum mehr möglich
+wäre. Da diese Strategie sehr aufwendig ist und dazu noch von einer grossen
+Anzahl BenutzerInnen umgesetzt werden müsste, damit die jeweilige Kommunikation
+geschützt wäre, ist ihre baldige Verbreitung trotz vorhandener Werkzeuge meiner
+Einschätzung nach eher unwahrscheinlich.
+
+Zweitens könnte der Versuch unternommen werden, die überwachenden Unternehmen
+und die überwachten Internetknoten komplett zu meiden. Dies würde faktisch zum
+totalen Verzicht auf das Internet führen, da praktisch der gesamte Datenverkehr
+über wenige einzelne (überwachte) Knoten verläuft. Zudem werden die am stärksten
+genutzten Dienstleistung von einigen wenigen Konzernen angeboten, die gemäss
+\cite{snowden:nsa} oft ebenfalls zur (geheimen) Überwachtung verpflichtet sind.
+
+Die dritte Strategie, auf welche ich in diesem Projekt zurückgreifen werde,
+funktioniert komplett anders. Anstatt die Nutz- und Metadaten so zu
+manipulieren, dass sie nicht mehr ausgewertet werden können oder auf grosse
+Teile des Internets zu verzichten, wird mit dieser Strategie versucht, die
+echten Daten durch grosse Mengen von künstlich erzeugten Daten zu erweitern, die
+sich kaum von den Echten unterscheiden lassen. Durch die entstehende Datenflut
+wird die Auswertung der Protokolle stark verfälscht und nutzlos.
+
+\subsection{Soll-Zustand}
+
+Um diese dritte Strategie umzusetzen, sind verschiedene Werkzeuge, die jeweils
+auf das verwendete Kommunikationsmittel bzw. die Dienstleistung angepasst sind,
+notwendig. Um einen grossen Bereich der Internetnutzung abzudecken, soll in
+diesem Projekt eine Erweiterung für Internet-Browser geschrieben werden, welche
+die Google Suche wie folgt nutzt.
+
+In der gesamten Zeit, in der ein Browser mit dieser Erweiterung läuft, sollen im
+Hintergrund (ohne, dass der/die BenutzerIn dadurch gestört wird) Suchanfragen an
+Google gestellt werden. Die Suchanfragen sowie die zeitlichen Abstände zwischen
+einzelnen Anfragen sollen dabei möglichst nicht von echten Suchanfragen
+unterschieden werden können. Anschliessend soll ein zufällig ausgewähltes
+Suchresultat geöffnet werden. Als Quelle für Suchbegriffe könnten zum Beispiel
+echte Suchanfragen anderer BenutzerInnen der Browser-Erweiterung dienen.
+
+Diese Methode hat ausserdem den positiven Nebeneffekt, die so genannte
+Filterblase zu verhindern. Unter Filterblase wird der Mechanismus verstanden,
+dass Suchmaschinen BenutzerInnenprofile anlegen und den jeweiligen BenutzerInnen
+auf sie zugeschnittene Ergebnisse anzeigen. Dabei entgehen den Leuten wichtige
+Alternativen, die vom Algorithmus bereis ausgefiltert wurden.
+
+Dabei soll sich diese Arbeit ausschliesslich mit dem Client-Teil der Software
+beschäftigen. Allfällige Server-Komponenten sollen vorerst nicht berücksichtigt
+werden.

@@ -1,0 +1,35 @@
+\subsection{Bedienbarkeit}
+\label{subsec:nichtfunktionale-bedienbarkeit}
+
+Gemeint ist gemäss \cite{iso:9126} der \enquote{Aufwand für [...]
+Benutzer[Innen], die Anwendung zu bedienen}.
+
+\subsubsection{Beschreibung}
+
+Da \textit{Google Muddle} vollständig automatisch funktionieren muss, ist keine
+Interatktion mit BenutzerInnen gewünscht. Sie sollen auch nicht die Möglichkeit
+haben, Konfigurationen vorzunehmen, da die Verhaltensweise der Applikation für
+jedeN identisch sein soll. Dies vereinfacht die Weiterentwicklung vom Verhalten
+aufgrund neuer Erkentnisse, da keine BenutzerInnenspezifische Einstellungen
+berücksichtigt werden müssen. So können auch jeweils die optimalen Einstellungen
+zur bestmöglichen Erreichung der Ziele (vgl. Kapitel
+\ref{subsec:einleitun-motivation}) für alle gesetzt werden. Auch spezielle
+Funktionen wie Updates sollen automatisch - also ohne BenutzerInneninteraktion
+- stattfinden.
+
+\subsubsection{Messverfahren}
+
+So viele BenutzerInnen wie möglich werden die Applikation installiert. Nach der
+Installation versuchen sie, irgendwie mit der Applikation zu interagieren. Dies
+darf weder beim Start noch beim Beenden des Browsers möglich sein. Auch während
+der gesamten Laufzeit des Browsers oder bei einem allfälligen speziellen
+Funktion wie zum Beispiel einem Update darf die Erweiterung nicht wahrgenommen
+werden. (Als Abgrenzung zum Verbrauchsverhalten (vgl. Kapitel 
+\ref{subsec:nichtfunktionale-verbrauchsverhalten}), wo sie aufgrund des
+Ressourcenverbrauchs nicht wahrgenommen werden darf, gilt hier einzig die
+Wahrnehmung aufgrund von BenutzerInneninteraktionen wie zum Beispiel
+Konfiguration oder Fehlermeldungen.)
+
+\subsubsection{Geltungsbereich}
+
+Diese Anforderung gilt für die gesamten Laufzeit der Applikation.

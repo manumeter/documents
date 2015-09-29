@@ -1,0 +1,74 @@
+\section{Nichtfunktionale Anforderungen}
+\label{sec:nichtfunktionale}
+
+Eine Anforderung ist gemäss \cite{glinz:nfr} als nichtfunktional zu verstehen, 
+wenn \enquote{das ihr zu Grunde liegende Bedürfnis eine nicht gegenständliche
+Eigenschaft [der Applikation] ist}. In diesem Kapitel werden also Anforderungen
+definiert, bei welchen das (der Anforderung zu Grunde liegende) Bedürfnis nicht
+die Funktionalität selbst ist.
+
+In Tabelle \ref{tbl:softwarequalitaet} ist die (vollständige) Liste der
+Qualitätsmerkmale von Software gemäss \acs{ISO}/\acs{IEC} 9126 (\acs{DIN} 66272)
+zu finden. Einige davon werden im Folgenden als nichtfunktionale Anforderungen
+in Bezug auf \textit{Google Muddle} genauer beschrieben. Die übrigen werden im
+Rahmen dieser Modularbeit nicht erfasst.
+\\[\intextsep]
+\begin{minipage}{\linewidth}
+	\centering
+	\begin{tabular}{llr}
+		\hline
+		Kategorie & Qualitätsmerkmal & Priorität \\
+		\hline
+		\multirow{6}{*}{Funktionalität:} & Angemessenheit & mittel \\
+		 & \textbf{Richtigkeit} & \textbf{hoch} \\
+		 & \textbf{Interoperabilität}
+		  (\ref{subsec:nichtfunktionale-interoperabilitaet}) & \textbf{hoch} \\
+		 & \textbf{Sicherheit} & \textbf{hoch} \\
+		 & Ordnungsmässigkeit & mittel \\
+		 & Konformität & gering \\
+		\hline
+		\multirow{4}{*}{Zuverlässigkeit:} & Reife & mittel \\
+		 & \textbf{Fehlertoleranz} & \textbf{hoch} \\
+		 & Wiederherstellbarkeit & gering \\
+		 & Konformität & gering \\
+		\hline
+		\multirow{5}{*}{Benutzbarkeit:} & Verständlichkeit & mittel \\
+		 & Erlernbarkeit & gering \\
+		 & \textbf{Bedienbarkeit}
+		  (\ref{subsec:nichtfunktionale-bedienbarkeit}) & \textbf{hoch} \\
+		 & \textbf{Attraktivität} & \textbf{hoch} \\
+		 & Konformität & gering \\
+		\hline
+		\multirow{3}{*}{Effizienz:} & Zeitverhalten & mittel \\
+		 & \textbf{Verbrauchsverhalten}
+		  (\ref{subsec:nichtfunktionale-verbrauchsverhalten}) & \textbf{hoch} \\
+		 & Konformität & gering \\
+		\hline
+		\multirow{5}{*}{Wartbarkeit/Änderbarkeit:} & \textbf{Analysierbarkeit}
+		 & \textbf{hoch} \\
+		 & \textbf{Modifizierbarkeit} & \textbf{hoch} \\
+		 & \textbf{Stabilität} & \textbf{hoch} \\
+		 & Testbarkeit & mittel \\
+		 & Konformität & gering \\
+		\hline
+		\multirow{5}{*}{Übertragbarkeit:} & \textbf{Anpassbarkeit}
+		 & \textbf{hoch} \\
+		 & \textbf{Installierbarkeit}
+		  (\ref{subsec:nichtfunktionale-installierbarkeit}) & \textbf{hoch} \\
+		 & Koexistenz & gering \\
+		 & Austauschbarkeit & gering \\
+		 & Konformität & gering \\
+		\hline
+	\end{tabular}
+	\tabcaption{Qualitätsmerkmale nach \cite{iso:9126}}
+	\label{tbl:softwarequalitaet}
+\end{minipage}
+\newpage
+
+\input{pflichtenheft-nichtfunktionale-interoperabilitaet.tex}
+\newpage
+\input{pflichtenheft-nichtfunktionale-bedienbarkeit.tex}
+\newpage
+\input{pflichtenheft-nichtfunktionale-verbrauchsverhalten.tex}
+\newpage
+\input{pflichtenheft-nichtfunktionale-installierbarkeit.tex}

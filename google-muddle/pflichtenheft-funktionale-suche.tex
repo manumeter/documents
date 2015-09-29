@@ -1,0 +1,38 @@
+\subsection{Suchanfrage}
+\label{subsec:funktionale-suche}
+
+Soll eine neue Suchanfrage gestellt werden, wird zuerst auf die Datenbank mit
+bisherigen Suchbegriffen aller Benutzer von \textit{Google Muddle} zugegriffen.
+Dabei stellt der Server einen Suchbegriff zur Verfügung (siehe 
+\ref{subsubsec:funktionale-suche-schritte} Essenzielle Schritte). Nachdem nach
+diesem Begriff gesucht wurde, soll ein zufällig ausgewähltes Ergebnis geöffnet
+werden. Dies lässt die Suche \enquote{echter} wirken und verfälscht weitere
+Statistiken.
+
+\subsubsection{Auslöser}
+
+Auslöser ist das \enquote{Eruieren der Ausführung} (funktionale Anforderung
+\ref{subsec:funktionale-ausfuehrung}) beziehungsweise die Zeit, da immer wieder
+(in unterschiedlichen zufälligen Zeitinvervallen) Suchanfragen ausgelöst werden.
+
+\subsubsection{AkteurInnen}
+
+AkteurInnen sind für diese funktionale Anforderung keine vorhanden.
+
+\subsubsection{Essenzielle Schritte}
+\label{subsubsec:funktionale-suche-schritte}
+
+\begin{enumerate}
+\item Herunterladen eines Suchbegriffes. Der Suchbegriff wird vom Server auf
+zufälliger Basis zur Verfügung gestellt, ohne, dass der Client (\textit{Google
+Muddle}) darauf Einfluss nehmen könnte.\footnote[1]{Dies ermöglicht es, später
+serverseitig neue Features einzubauen. So könnte zum Beispiel der reine Zufall
+durch einen besseren Algorithmus ersetzt werden, der reale Trends abzuflachen
+versucht oder vermehrt nach indizierten Wörtern sucht, um diesen
+Überwachungsmechanismus zu stören.}
+\item Bei Google nach dem erhaltenen Begriff (beziehungsweise dem Satz) suchen.
+\item Ein von Google zur Verfügung gestelltes Suchresultat nach dem
+Zufallsprinzip\footnote[2]{Auch dieser Zufallsmechanismus könnte später durch
+einen \enquote{intelligenten} Algorithmus ersetzt werden.} öffnen.
+\item Die Verbindung schliessen.
+\end{enumerate}
