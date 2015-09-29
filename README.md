@@ -9,5 +9,5 @@ implementation). The graphics are made with *Dia*, everything else is *LaTeX*,
 except for the presentation which I made with *OpenOffice*.
 
 ## Letters (letters)
-These are two templates for A4 sized letters that match in a envelope with
+These are two templates for A4 sized letters that match in an envelope with
 address window. It's extended *Markdown* and converted to *PDF* with *Pandoc*.
